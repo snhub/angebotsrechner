@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="basic.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<title>Jakob Angebotsrechner</title>
+</head>
+<body>
+<div class="mainframe">
+	<div class="main-border"></div>
+	<section class="main-content" id="page">
+		<header>
+			<h1 class="header-left">Angebotsrechner</h1>
+			<h1 class="header-right">Jakob Bau & Fassaden GmbH</h1>
+		</header>
+		<nav>
+			<div class="nav-row">
+				<div class="nav-item"><h3>Rechner</h3></div>
+				<div class="nav-item"><h3>Übersicht</h3></div>
+				<div class="nav-item"><h3>Angebot</h3></div>
+			</div>
+		</nav>
+		<main>
+			<div class="workUnit-section">
+				<h3 class="form-title">Arbeitseinheiten</h3>
+				<div class="form-heading">
+					<span class="caption-heading">Bezeichnung</span>
+					<span class="hourlyRate-heading">Stundensatz</span>
+					<span class="hours-heading">Stunden</span>
+					<span class="sum-heading">Summe</span>
+					<span class="delete-heading"></span>
+				</div>
+				<div class="workUnit-row">
+					<input class="caption-content" type="text" onClick="this.select()" />
+					<div><input class="hourlyRate-content" type="text" onInput="calculateWorkUnitSum(this)" />&nbsp;€</div>
+					<input class="hours-content" type="text" onInput="calculateWorkUnitSum(this)" />
+					<span class="sum-content">123,45</span>
+					<a class="delete-content" onclick="removeWorkUnit(this)">&times;</a>
+				</div>
+				<div class="form-footer">
+					<button class="form-action" type="button" onclick="appendWorkUnit(this)">Arbeitseinheit hinzufügen</button>
+					<span class="total-sum">456,78</span>
+				</div>
+			</div>
+			<div class="material-section">
+				<h3 class="form-title">Materialeinsatz</h3>
+				<div class="form-heading">
+					<span class="caption-heading">Material</span>
+					<span class="materialPrice-heading">Preis/Einheit</span>
+					<span class="materialAmount-heading">Menge</span>
+					<span class="sum-heading">Summe</span>
+					<span class="delete-heading"></span>
+				</div>
+				<div class="material-row">
+					<input class="caption-content" type="text" onClick="this.select()" />
+					<input class="materialPrice-content" type="text" />
+					<input class="materialAmount-content" type="number" />
+					<span class="sum-content">123,45</span>
+					<a class="delete-content" onclick="removeMaterial(this)">&times;</a>
+				</div>
+				<div class="form-footer">
+					<button class="form-action" type="button" onclick="appendMaterial(this)">Materialeinsatz hinzufügen</button>
+				</div>
+			</div>
+			<div class="machine-section">
+				<h3 class="form-title">Maschineneinsatz</h3>
+				<div class="form-heading">
+					<span class="caption-heading">Maschine</span>
+					<span class="machinePrice-heading">Preis/Stunde</span>
+					<span class="machineHours-heading">Stunden</span>
+					<span class="sum-heading">Summe</span>
+					<span class="delete-heading"></span>
+				</div>
+				<div class="machine-row">
+					<input class="caption-content" type="text" onClick="this.select()" />
+					<input class="machinePrice-content" type="text" />
+					<input class="machineHours-content" type="number" />
+					<span class="machine-content">123,45</span>
+					<a class="delete-content" onclick="removeMachine(this)">&times;</a>
+				</div>
+				<div class="form-footer">
+					<button class="form-action" type="button" onclick="appendMachine(this)">Maschineneinsatz hinzufügen</button>
+				</div>
+			</div>
+			<div class="-section">
+				<h3 class="form-title">Gewinnaufschlag</h3>
+				<div class="form-heading">
+					<span class="caption-heading">Bezeichnung</span>
+					<span class="-heading">Stundensatz</span>
+					<span class="-heading">Stunden</span>
+					<span class="sum-heading">Summe</span>
+					<span class="delete-heading"></span>
+				</div>
+				<div class="-row">
+					<input class="caption-content" type="text" onClick="this.select()" />
+					<input class="-content" type="text" />
+					<input class="-content" type="number" />
+					<span class="-content">123,45</span>
+					<a class="delete-content" onclick="remove(this)">X</a>
+				</div>
+				<div class="form-footer">
+					<button class="form-action" type="button" onclick="append(this)"> hinzufügen</button>
+				</div>
+			</div>
+			<h3>Materialeinsatz</h3>
+			<h3>Maschineneinsatz</h3>
+			<h3>Gewinnaufschlag</h3>
+		</main>
+		<footer>
+			<h5>by digi-craft 2018</h5>
+		</footer>
+	</section>
+	<div class="main-border"></div>
+</div>
+<script src="jquery/jquery.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

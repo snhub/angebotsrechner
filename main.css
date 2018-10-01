@@ -1,0 +1,204 @@
+#page {
+	display: grid;
+	grid-gap: 5px;
+	/*grid-template-columns: 150px auto 150px;*/
+	grid-template-rows: auto auto auto auto;
+	align-content: center;
+}
+
+#page > * {
+	/*border: 1px solid black;*/
+}
+
+header {
+	display:grid;
+	grid-template-columns: auto auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.header-left {
+}
+
+.header-right {
+	text-align: right;
+	color: crimson;
+}
+
+footer {
+	text-align: right;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+main {
+	padding: 20px 10px 30px 30px;
+}
+
+.nav-row {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-column-gap: 4px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.nav-item {
+	text-align: center;
+	border: 1px solid blue;
+	background-color: burlywood;
+	cursor: pointer;
+}
+
+.workUnit-section, .material-section, .machine-section {
+	background-color: blanchedalmond;
+	padding: 5px 5px 10px 10px;
+	margin-bottom:20px;
+}
+
+h3.form-title {
+	margin-top:0px;
+	margin-bottom: 10px;
+	padding-top:0px;
+}
+
+.form-content {
+	max-width:100%;
+}
+
+.form-heading{
+	display:grid;
+	padding-left:20px;
+	grid-template-columns: auto 200px 200px 150px 20px;
+}
+
+.form-row {
+
+}
+
+.workUnit-row, .material-row, .machine-row{
+	display:grid;
+	grid-template-columns: auto 200px 200px 150px 20px;
+	padding-left:20px;
+	margin-bottom: 10px;
+}
+
+.caption-heading {
+	margin-bottom:10px;
+	font-weight: bold;
+	font-size:medium;
+}
+.caption-content {
+	width:400px;
+	font-size:medium;
+	margin-right:50px;
+}
+
+.hourlyRate-heading {
+	margin-bottom:10px;
+	font-weight: bold;
+	font-size:medium;
+}
+.hourlyRate-content {
+	width:100px;
+	font-size:medium;
+}
+
+.materialPrice-heading {
+	margin-bottom:10px;
+	font-weight: bold;
+	font-size:medium;
+}
+.materialPrice-content {
+	width:100px;
+	font-size:medium;
+}
+
+.machinePrice-heading {
+	margin-bottom:10px;
+	font-weight: bold;
+	font-size:medium;
+}
+.machinePrice-content {
+	width:100px;
+	font-size:medium;
+}
+
+.hours-heading {
+	margin-bottom:10px;
+	font-weight: bold;
+	font-size:medium;
+}
+.hours-content {
+	width:100px;
+	font-size:medium;
+}
+
+.materialAmount-heading {
+	margin-bottom:10px;
+	font-weight: bold;
+	font-size:medium;
+}
+.materialAmount-content {
+	width:100px;
+	font-size:medium;
+}
+
+.machineHours-heading {
+	margin-bottom:10px;
+	font-weight: bold;
+	font-size:medium;
+}
+.machineHours-content {
+	width:100px;
+	font-size:medium;
+}
+
+.sum-heading {
+	margin-bottom:10px;
+	font-weight: bold;
+	text-align: right;
+	margin-right:50px;
+}
+.sum-content {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size:medium;
+	margin-top:4px;
+	text-align: right;
+	margin-right:50px;
+}
+
+.delete-heading {
+	margin-bottom:10px;
+	font-weight: bold;
+	text-align: right;
+}
+.delete-content {
+	font-size:large;
+	margin-top:4px;
+	witdh:20px;
+	cursor: pointer;
+}
+
+.form-footer {
+	display:grid;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+	margin-left:10px;
+	margin-top:10px;
+	padding:5px;
+}
+
+.form-action {
+	/*margin-left:20px;*/
+	margin-top:10px;
+	padding:5px;
+	font-size:medium;
+}
+
+.total-sum {
+	font-family: "Lucida Console", Monaco, monospace;
+	margin-right:60px;
+	font-size: medium;
+	font-weight: bold;
+}
