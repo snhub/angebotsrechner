@@ -1,13 +1,9 @@
-#page {
+.main-content {
 	display: grid;
 	grid-gap: 5px;
 	/*grid-template-columns: 150px auto 150px;*/
 	grid-template-rows: auto auto auto auto;
 	align-content: center;
-}
-
-#page > * {
-	/*border: 1px solid black;*/
 }
 
 header {
@@ -50,6 +46,29 @@ main {
 	cursor: pointer;
 }
 
+
+.top-section {
+	display:grid;
+	grid-template-columns: auto auto;
+}
+
+.serialize-section {
+	margin-left:20px;
+}
+
+.serialize-buttons {
+	display: grid;
+	grid-template-rows: 1fr auto 1fr;
+	padding: 0px 10px 0px 10px;
+	/*justify-content: space-between;*/
+}
+
+.serialize-action {
+	padding:5px;
+	font-size:medium;
+	margin-bottom: 10px;
+}
+
 .quotation-row {
 	display: grid;
 	grid-template-columns: 150px auto;
@@ -63,6 +82,13 @@ main {
 	margin-right:50px;
 }
 
+.quotation-date {
+	font-family: Arial;
+	width:406px;
+	font-size:medium;
+	margin-right:50px;
+}
+
 .quotation-heading{
 	padding-left:0px;
 	padding-top:4px;
@@ -71,19 +97,16 @@ main {
 }
 
 .quotation-title {
-	margin-top:0px;
-	margin-bottom: 15px;
-	padding:5px 5px 5px 10px;
-	background-color: burlywood;
+	margin-bottom: 15px !important;
 }
 
-.workUnit-section, .material-section, .machine-section, .quotation-section, .profit-section {
+.workUnit-section, .material-section, .machine-section, .quotation-section, .modifiers-section, .serialize-section {
 	background-color: blanchedalmond;
 	padding-bottom: 10px;
 	margin-bottom:20px;
 }
 
-.form-title {
+.form-title, .quotation-title, .modifiers-title {
 	margin-top:0px;
 	margin-bottom: 10px;
 	padding:5px 5px 5px 10px;
@@ -94,24 +117,24 @@ main {
 	max-width:100%;
 }
 
-.form-heading{
+.form-heading {
 	display:grid;
 	padding-left:20px;
 	grid-template-columns: auto 200px 200px 150px 20px;
 }
 
-.workUnit-row, .material-row, .machine-row{
+.form-row {
 	display:grid;
 	grid-template-columns: auto 200px 200px 150px 20px;
 	padding-left:20px;
 	margin-bottom: 10px;
 }
 
-.quotation-content, .caption-content, .hourlyRate-content, .hours-content, .machineHours-content, .machinePrice-content, .materialAmount-content, .materialPrice-content {
+.quotation-content, .caption-content, .rate-content, .factor-content, .modifiers-input {
 	padding: 2px 5px 2px 5px;
 }
 
-.hourlyRate-content, .hours-content, .machineHours-content, .machinePrice-content, .materialAmount-content, .materialPrice-content {
+.rate-content, .factor-content, .modifiers-input {
 	text-align: right;
 	font-family: "Lucida Console", Monaco, monospace;
 }
@@ -127,62 +150,22 @@ main {
 	margin-right:50px;
 }
 
-.hourlyRate-heading {
+.rate-heading {
 	margin-bottom:10px;
 	font-weight: bold;
 	font-size:medium;
 }
-.hourlyRate-content {
+.rate-content {
 	width:100px;
 	font-size:medium;
 }
 
-.materialPrice-heading {
+.factor-heading {
 	margin-bottom:10px;
 	font-weight: bold;
 	font-size:medium;
 }
-.materialPrice-content {
-	width:100px;
-	font-size:medium;
-}
-
-.machinePrice-heading {
-	margin-bottom:10px;
-	font-weight: bold;
-	font-size:medium;
-}
-.machinePrice-content {
-	width:100px;
-	font-size:medium;
-}
-
-.hours-heading {
-	margin-bottom:10px;
-	font-weight: bold;
-	font-size:medium;
-}
-.hours-content {
-	width:100px;
-	font-size:medium;
-}
-
-.materialAmount-heading {
-	margin-bottom:10px;
-	font-weight: bold;
-	font-size:medium;
-}
-.materialAmount-content {
-	width:100px;
-	font-size:medium;
-}
-
-.machineHours-heading {
-	margin-bottom:10px;
-	font-weight: bold;
-	font-size:medium;
-}
-.machineHours-content {
+.factor-content {
 	width:100px;
 	font-size:medium;
 }
@@ -192,6 +175,7 @@ main {
 	font-weight: bold;
 	text-align: right;
 	margin-right:50px;
+	padding-right: 20px;
 }
 .sum-content {
 	font-family: "Lucida Console", Monaco, monospace;
@@ -226,7 +210,7 @@ main {
 	font-size:medium;
 }
 
-.total-sum {
+.section-sum, .total-sum, .total-item {
 	font-family: "Lucida Console", Monaco, monospace;
 	margin-right:65px;
 	margin-top: 8px;
@@ -234,5 +218,73 @@ main {
 	font-weight: bold;
 }
 
+.modifiers-content {
+	display:grid;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+}
 
+.modifiers-row {
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	justify-content: space-between;
+}
+
+.modifiers-total {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+}
+
+.modifiers-title {
+	margin-bottom: 15px !important;
+	margin-top: 8px;
+}
+
+.modifiers-item {
+	display: grid;
+	grid-template-columns: 150px auto;
+	padding-left:20px;
+	margin-bottom: 10px;
+}
+
+.modifiers-input {
+	width:100px;
+	font-size:medium;
+	margin-top: 7px;
+}
+
+.modifiers-heading{
+	padding-left:0px;
+	padding-top:2px;
+	float:left;
+	font-weight: bold;
+	margin-top: 8px;
+}
+
+.total-row {
+	display:grid;
+	grid-template-rows: auto auto;
+	text-align: right;
+}
+
+.total-heading{
+	padding-left:0px;
+	margin-top:10px;
+	margin-right:50px;
+	float:left;
+	font-weight:bold;
+}
+
+.total-item {
+	margin-top: 11px;
+	padding-right:5px;
+	font-weight: normal;
+}
+
+.total-sum {
+	margin-top: 10px;
+	border-bottom: 3px double;
+	padding-right:5px;
+}
 
