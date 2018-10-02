@@ -32,7 +32,7 @@ footer {
 }
 
 main {
-	padding: 20px 10px 30px 30px;
+	padding: 20px 10px 30px 10px;
 }
 
 .nav-row {
@@ -50,16 +50,44 @@ main {
 	cursor: pointer;
 }
 
-.workUnit-section, .material-section, .machine-section {
+.quotation-row {
+	display: grid;
+	grid-template-columns: 150px auto;
+	padding-left:20px;
+	margin-bottom: 10px;
+}
+
+.quotation-content {
+	width:400px;
+	font-size:medium;
+	margin-right:50px;
+}
+
+.quotation-heading{
+	padding-left:0px;
+	padding-top:4px;
+	float:left;
+	font-weight: bold;
+}
+
+.quotation-title {
+	margin-top:0px;
+	margin-bottom: 15px;
+	padding:5px 5px 5px 10px;
+	background-color: burlywood;
+}
+
+.workUnit-section, .material-section, .machine-section, .quotation-section, .profit-section {
 	background-color: blanchedalmond;
-	padding: 5px 5px 10px 10px;
+	padding-bottom: 10px;
 	margin-bottom:20px;
 }
 
-h3.form-title {
+.form-title {
 	margin-top:0px;
 	margin-bottom: 10px;
-	padding-top:0px;
+	padding:5px 5px 5px 10px;
+	background-color: burlywood;
 }
 
 .form-content {
@@ -72,15 +100,20 @@ h3.form-title {
 	grid-template-columns: auto 200px 200px 150px 20px;
 }
 
-.form-row {
-
-}
-
 .workUnit-row, .material-row, .machine-row{
 	display:grid;
 	grid-template-columns: auto 200px 200px 150px 20px;
 	padding-left:20px;
 	margin-bottom: 10px;
+}
+
+.quotation-content, .caption-content, .hourlyRate-content, .hours-content, .machineHours-content, .machinePrice-content, .materialAmount-content, .materialPrice-content {
+	padding: 2px 5px 2px 5px;
+}
+
+.hourlyRate-content, .hours-content, .machineHours-content, .machinePrice-content, .materialAmount-content, .materialPrice-content {
+	text-align: right;
+	font-family: "Lucida Console", Monaco, monospace;
 }
 
 .caption-heading {
@@ -175,7 +208,7 @@ h3.form-title {
 }
 .delete-content {
 	font-size:large;
-	margin-top:4px;
+	margin-top:2px;
 	witdh:20px;
 	cursor: pointer;
 }
@@ -184,21 +217,22 @@ h3.form-title {
 	display:grid;
 	grid-template-columns: auto auto;
 	justify-content: space-between;
-	margin-left:10px;
 	margin-top:10px;
-	padding:5px;
+	padding:5px 5px 0px 20px;
 }
 
 .form-action {
-	/*margin-left:20px;*/
-	margin-top:10px;
 	padding:5px;
 	font-size:medium;
 }
 
 .total-sum {
 	font-family: "Lucida Console", Monaco, monospace;
-	margin-right:60px;
+	margin-right:65px;
+	margin-top: 8px;
 	font-size: medium;
 	font-weight: bold;
 }
+
+
+

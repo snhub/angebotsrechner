@@ -1,13 +1,22 @@
 /**
- * Calculates all Items of Work Units
+ * Author: digi-craft
+ * http://digi-craft.de
+ */
+
+$( document ).ready(function() {
+
+});
+
+/**
+ * Calculates sum of all Items in Work Unit Section
  * @param obj
  */
-function calculateWorkUnitSum(obj) {
-
-	let section = $(".workUnit-section");
+function calculateSum(obj, sectionName) {
+	let sectionString = "." + sectionName +"-section"
+	let section = $(sectionString);
 	section.find(".hourlyRate-content").each(function (index) {
-		let hours = section.find(".hours-content").eq(index).val();
 		let rate = $(this).val();
+		let hours = section.find(".hours-content").eq(index).val();
 		rate = rate.replace(",", ".");
 		rate = parseFloat(rate);
 		hours = hours.replace(",", ".");
@@ -18,12 +27,13 @@ function calculateWorkUnitSum(obj) {
 	})
 
 	let total = 0;
-	$(".workUnit-section .sum-content").each(function (index) {
-		total += parseFloat($(this).text().replace(",", "."));
+	$(sectionString + " .sum-content").each(function (index) {
+		let sum = $(this).text();
+		total += parseFloat(sum.replace(",", "."));
 	})
 
 	total = total.toFixed(2).replace(".", ",") + " €";
-	$(".workUnit-section .form-footer .total-sum").text(total);
+	$(sectionString + " .form-footer .total-sum").text(total);
 }
 
 function appendWorkUnit(obj) {
@@ -33,13 +43,14 @@ function appendWorkUnit(obj) {
 	elem.find(".hourlyRate-content").val("");
 	elem.find(".hours-content").val("");
 	elem.find(".sum-content").text("");
+	calculateSum(obj);
 }
 
 function removeWorkUnit(obj) {
 	if ($(".workUnit-row").length > 1) {
 		obj.parentNode.remove();
 	}
-	calculateWorkUnitSum(obj);
+	calculateSum(obj);
 }
 
 

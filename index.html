@@ -22,6 +22,29 @@
 			</div>
 		</nav>
 		<main>
+			<div class="quotation-section">
+				<h3 class="quotation-title">Angebotsdaten</h3>
+				<div class="quotation-row" style="margin-bottom:20px;">
+					<span class="quotation-heading">Vorhaben:</span>
+					<input id="project" class="quotation-content" type="text">
+				</div>
+				<div class="quotation-row">
+					<span class="quotation-heading">Kunde:</span>
+					<input id="customer" class="quotation-content" type="text">
+				</div>
+				<div class="quotation-row">
+					<span class="quotation-heading">Adresse1:</span>
+					<input id="address1" class="quotation-content" type="text">
+				</div>
+				<div class="quotation-row">
+					<span class="quotation-heading">Adresse2:</span>
+					<input id="address2" class="quotation-content" type="text">
+				</div>
+				<div class="quotation-row">
+					<span class="quotation-heading">PLZ/Ort:</span>
+					<input id="city" class="quotation-content" type="text">
+				</div>
+			</div>
 			<div class="workUnit-section">
 				<h3 class="form-title">Arbeitseinheiten</h3>
 				<div class="form-heading">
@@ -33,14 +56,14 @@
 				</div>
 				<div class="workUnit-row">
 					<input class="caption-content" type="text" onClick="this.select()" />
-					<div><input class="hourlyRate-content" type="text" onInput="calculateWorkUnitSum(this)" />&nbsp;€</div>
-					<input class="hours-content" type="text" onInput="calculateWorkUnitSum(this)" />
-					<span class="sum-content">123,45</span>
+					<div><input class="hourlyRate-content" type="text" onInput="calculateSum(this, 'workUnit')" onclick="calculateSum(this, 'workUnit')" />&nbsp;€</div>
+					<input class="hours-content" type="text" onInput="calculateSum(this, 'workUnit')" onclick="calculateSum(this, 'workUnit')" />
+					<span class="sum-content">0 €</span>
 					<a class="delete-content" onclick="removeWorkUnit(this)">&times;</a>
 				</div>
 				<div class="form-footer">
 					<button class="form-action" type="button" onclick="appendWorkUnit(this)">Arbeitseinheit hinzufügen</button>
-					<span class="total-sum">456,78</span>
+					<span class="total-sum">0 €</span>
 				</div>
 			</div>
 			<div class="material-section">
@@ -54,13 +77,14 @@
 				</div>
 				<div class="material-row">
 					<input class="caption-content" type="text" onClick="this.select()" />
-					<input class="materialPrice-content" type="text" />
-					<input class="materialAmount-content" type="number" />
-					<span class="sum-content">123,45</span>
+					<div><input class="materialPrice-content" type="text" onInput="calculateSum(this)" />&nbsp;€</div>
+					<input class="materialAmount-content" type="number" onInput="calculateSum(this)" />
+					<span class="sum-content">0 €</span>
 					<a class="delete-content" onclick="removeMaterial(this)">&times;</a>
 				</div>
 				<div class="form-footer">
 					<button class="form-action" type="button" onclick="appendMaterial(this)">Materialeinsatz hinzufügen</button>
+					<span class="total-sum">0 €</span>
 				</div>
 			</div>
 			<div class="machine-section">
@@ -74,38 +98,23 @@
 				</div>
 				<div class="machine-row">
 					<input class="caption-content" type="text" onClick="this.select()" />
-					<input class="machinePrice-content" type="text" />
-					<input class="machineHours-content" type="number" />
-					<span class="machine-content">123,45</span>
+					<div><input class="machinePrice-content" type="text" onInput="calculateSum(this)" />&nbsp;€</div>
+					<input class="machineHours-content" type="number" onInput="calculateSum(this)" />
+					<span class="sum-content">0 €</span>
 					<a class="delete-content" onclick="removeMachine(this)">&times;</a>
 				</div>
 				<div class="form-footer">
 					<button class="form-action" type="button" onclick="appendMachine(this)">Maschineneinsatz hinzufügen</button>
+					<span class="total-sum">0 €</span>
 				</div>
 			</div>
-			<div class="-section">
+			<div class="profit-section">
 				<h3 class="form-title">Gewinnaufschlag</h3>
-				<div class="form-heading">
-					<span class="caption-heading">Bezeichnung</span>
-					<span class="-heading">Stundensatz</span>
-					<span class="-heading">Stunden</span>
-					<span class="sum-heading">Summe</span>
-					<span class="delete-heading"></span>
-				</div>
-				<div class="-row">
-					<input class="caption-content" type="text" onClick="this.select()" />
-					<input class="-content" type="text" />
-					<input class="-content" type="number" />
-					<span class="-content">123,45</span>
-					<a class="delete-content" onclick="remove(this)">X</a>
-				</div>
-				<div class="form-footer">
-					<button class="form-action" type="button" onclick="append(this)"> hinzufügen</button>
+				<div class="quotation-row" style="margin-bottom:20px;">
+					<span class="quotation-heading">Aufschlag:</span>
+					<input class="quotation-content" type="text">
 				</div>
 			</div>
-			<h3>Materialeinsatz</h3>
-			<h3>Maschineneinsatz</h3>
-			<h3>Gewinnaufschlag</h3>
 		</main>
 		<footer>
 			<h5>by digi-craft 2018</h5>
