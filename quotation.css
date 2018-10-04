@@ -1,0 +1,67 @@
+:root {
+	--page-width:210mm;
+	--page-height:297mm;
+	--border-left:20mm;
+	--border-right:25mm;
+	--border-top:27mm;
+	--border-bottom:25mm;
+	/*--content-width:calc(var(--page-width) - var(--border-left) - var(--border-right));
+	--content-height:calc(var(--page-height) - var(--border-top) - var(--border-bottom));*/
+}
+
+body {
+	/*height:var(--content-height);*/
+	width:var(--page-width);
+	margin-left:auto;
+	margin-right:auto;
+	/*padding:var(--border-top) var(--border-right) var(--border-bottom) var(--border-left);*/
+	font-family: Arial;
+
+}
+
+.a4 {
+	position: relative;
+	border:1px solid gainsboro;
+}
+
+p {
+	margin:0;
+}
+
+.address-frame {
+	border:1px solid gainsboro;
+	position:absolute;
+	top:45mm;
+	left:20mm;
+	width:85mm;
+	height:45mm;
+	padding-left:5mm;
+}
+
+.address-frame .sender {
+	font-size: 7pt;
+}
+
+.address-frame .customer-name {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+.address-frame .customer-address {
+	font-size: 10pt;
+}
+
+.address-frame .customer-city {
+	font-size: 11pt;
+}
+
+.sender-frame {
+	border:1px solid gainsboro;
+	position:absolute;
+	top:50mm;
+	left:125mm;
+	width:75mm;
+	height:40mm;
+	padding-left:5mm;
+}
+

@@ -59,8 +59,23 @@ class Quotation {
 
 
 $( document ).ready(function() {
-
+	//load("data"); //tabs removed
 });
+
+/*function load(tab) {
+	$("main").load(tab + ".html");
+}*/
+
+function testdata() {
+	$.getJSON("testdata.json", "text/json", function(data) {
+		fillForm(data);
+		calculateSum();
+	});
+}
+
+function print() {
+	window.open("quotation.html", "_blank");
+}
 
 function buildJson() {
 	let data = new Quotation();
@@ -117,55 +132,117 @@ function fillForm(data) {
 	$("#address2").val(quot.address2);
 	$("#city").val(quot.city);
 
-	removeClonesButOne();
+	removeRowsButOne();
 
-	let workUnits = data.workUnits;
-	let count = workUnits.length;
+	let count = data.workUnits.length;
 
-	if(count > 0) {
-		let obj = data.workUnits[0];
-		$(".workUnit-section .caption-content").val(obj.name);
-		$(".workUnit-section .rate-content").val(obj.rate);
-		$(".workUnit-section .factor-content").val(obj.factor);
-	}
-
-	if (count > 1) {
-		for (let i = 1; i < count; i++) {
-			let obj = data.workUnits[i];
-			$(".workUnit-section .caption-content").eq(i).val(obj.name);
-			$(".workUnit-section .rate-content").eq(i).val(obj.rate);
-			$(".workUnit-section .factor-content").eq(i).val(obj.factor);
+	for (let i = 0; i < count; i++) {
+		let row;
+		let obj = data.workUnits[i];
+		if (i == 0) {
+			row = getLastRow("workUnit");
+		}
+		else {
+			row = cloneLastRow("workUnit");
+		}
+		row.find(".caption-content").val(obj.name);
+		row.find(".rate-content").val(obj.rate);
+		row.find(".factor-content").val(obj.factor);
+		if(i > 0) {
+			row.insertAfter(getLastRow("workUnit"));
 		}
 	}
+
+	count = data.materials.length;
+
+	for (let i = 0; i < count; i++) {
+		let row;
+		let obj = data.materials[i];
+		if (i == 0) {
+			row = getLastRow("material");
+		}
+		else {
+			row = cloneLastRow("material");
+		}
+		row.find(".caption-content").val(obj.name);
+		row.find(".rate-content").val(obj.rate);
+		row.find(".factor-content").val(obj.factor);
+		if(i > 0) {
+			row.insertAfter(getLastRow("material"));
+		}
+	}
+
+	count = data.machines.length;
+
+	for (let i = 0; i < count; i++) {
+		let row;
+		let obj = data.machines[i];
+		if (i == 0) {
+			row = getLastRow("machine");
+		}
+		else {
+			row = cloneLastRow("machine");
+		}
+		row.find(".caption-content").val(obj.name);
+		row.find(".rate-content").val(obj.rate);
+		row.find(".factor-content").val(obj.factor);
+		if(i > 0) {
+			row.insertAfter(getLastRow("machine"));
+		}
+	}
+
+	let sur = data.surcharge;
+	$("#discount-input").val(sur.discount);
+	$("#profit-input").val(sur.profit);
+	$("#tax-input").val(sur.tax);
+
+	calculateSum();
+}
+
+function getLastRow(sectionName) {
+	return $("." + sectionName + "-section .form-row").last();
+}
+
+function cloneLastRow(sectionName) {
+	let cloned = getLastRow(sectionName);
+	let clone = cloned.clone();
+	return clone;
+}
+
+function removeRowsButOne() {
+
+	let workUnit = $(".workUnit-section .form-row");
+	let material = $(".material-section .form-row");
+	let machine = $(".machine-section .form-row");
 	
-}
-
-function cloneRow(sectionName) {
-	return $("." + sectionName + "-section .form-row :last").clone();
-}
-
-function removeClonesButOne() {
-
-	let workUnit = $(".workUnit-section .form-row").eq(0).clone();
-	let material = $(".material-section .form-row").eq(0).clone();
-	let machine = $(".machine-section .form-row").eq(0).clone();
-
 	let sections = [workUnit, material, machine];
-
-	$("main").remove(".form-row");
-	$(".form-footer").each(function (index) {
-		$(this).insertBefore(sections[index]);
-	})
-
+	
+	sections.forEach(function (item) {
+		$(item).each(function (index) {
+			if(index > 0) {
+				$(this).remove();
+			}
+		});
+	});
 }
 
 /**
  * https://stackoverflow.com/a/24776295/3153939
  */
 function upload() {
+	let data;
 	let input = $(document.createElement('input'));
 	input.attr("type", "file");
+	input.change(function (event) {
+		let reader = new FileReader();
+		reader.readAsText(event.target.files[0]);
+		reader.onload = function () {
+			let data = JSON.parse(reader.result);
+			fillForm(data);
+		};
+	});
 	input.trigger('click');
+	calculateSum();
 }
 
 /**

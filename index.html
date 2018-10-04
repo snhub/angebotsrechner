@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="basic.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="data.css">
 	<title>Jakob Angebotsrechner</title>
 </head>
 <body>
@@ -14,13 +14,6 @@
 			<h1 class="header-left">Angebotsrechner</h1>
 			<h1 class="header-right">Jakob Bau & Fassaden GmbH</h1>
 		</header>
-		<nav>
-			<div class="nav-row">
-				<div class="nav-item"><h3>Rechner</h3></div>
-				<div class="nav-item"><h3>Übersicht</h3></div>
-				<div class="nav-item"><h3>Angebot</h3></div>
-			</div>
-		</nav>
 		<main>
 			<div class="top-section">
 				<div class="quotation-section">
@@ -57,9 +50,10 @@
 				<div class="serialize-section">
 					<h3 class="quotation-title">Funktionen</h3>
 					<div class="serialize-buttons">
-						<button class="serialize-action" type="button" onclick="upload()">Angebot Laden</button>
-						<span></span>
-						<button class="serialize-action" type="button" onclick="download()">Angebot Speichern</button>
+						<button class="serialize-action" type="button" onclick="upload()">Angebot laden</button>
+						<button class="serialize-action" type="button" onclick="download()">Angebot speichern</button>
+						<button class="serialize-action" type="button" onclick="print()">Druckseite erstellen</button>
+						<button class="serialize-action" type="button" onclick="testdata()">(Testdaten laden)</button>
 					</div>
 				</div>
 			</div>

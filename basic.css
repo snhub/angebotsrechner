@@ -22,3 +22,17 @@ section.main-content {
 	padding-left:10px;
 	padding-right:10px;
 }
+
+/*https://stackoverflow.com/a/2618980/3153939*/
+@media print {
+	body * {
+		visibility: hidden;
+	}
+	.a4 * {
+		visibility: visible;
+	}
+	a4 {
+		left: 0;
+		top: 0;
+	}
+}

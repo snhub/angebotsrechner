@@ -1,0 +1,92 @@
+{
+	"quotationData": {
+		"project": "Anwendung zur Erstellung von Angeboten",
+		"date": "2018-10-04",
+		"quotationNumber": "23947 A01",
+		"customer": "Jakob Bau & Fassaden GmbH",
+		"address1": "Esslinger Straße 19",
+		"address2": "",
+		"city": "72124 Pliezhausen"
+	},
+	"workUnits": [
+		{
+			"name": "Anwendungslayout",
+			"rate": "42,50",
+			"factor": "4"
+		},
+		{
+			"name": "Erstellung Dateneingabeformular",
+			"rate": "42,50",
+			"factor": "4,5"
+		},
+		{
+			"name": "Hinzufügen/Entfernen von Einträgen",
+			"rate": "59",
+			"factor": "5"
+		},
+		{
+			"name": "Formulardaten Laden/Speichern",
+			"rate": "59",
+			"factor": "4"
+		},
+		{
+			"name": "Berechnung und Anzeige der Summen",
+			"rate": "59",
+			"factor": "2,5"
+		}
+	],
+	"materials": [
+		{
+			"name": "Blut",
+			"rate": "10",
+			"factor": "6"
+		},
+		{
+			"name": "Schweiß",
+			"rate": "3",
+			"factor": "1"
+		},
+		{
+			"name": "Nerven",
+			"rate": "179",
+			"factor": "4"
+		}
+	],
+	"machines": [
+		{
+			"name": "Computer",
+			"rate": "0,50",
+			"factor": "24"
+		},
+		{
+			"name": "Peripherie",
+			"rate": "0,15",
+			"factor": "24"
+		},
+		{
+			"name": "Leitungen",
+			"rate": "0,05",
+			"factor": "24"
+		},
+		{
+			"name": "Gehirn",
+			"rate": "98",
+			"factor": "24"
+		},
+		{
+			"name": "Hände",
+			"rate": "10",
+			"factor": "24"
+		},
+		{
+			"name": "Arsch",
+			"rate": "5",
+			"factor": "24"
+		}
+	],
+	"surcharge": {
+		"discount": "30",
+		"profit": "10",
+		"tax": "19"
+	}
+}
