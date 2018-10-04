@@ -252,7 +252,8 @@ function download() {
 	let data = buildJson();
 	let element = document.createElement('a');
 	element.setAttribute('href', 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(data, null, "\t")));
-	element.setAttribute('download', "json.json");
+
+	element.setAttribute('download', $("#project").val() + ".json");
 
 	element.style.display = 'none';
 	document.body.appendChild(element);

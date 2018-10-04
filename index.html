@@ -68,8 +68,8 @@
 				</div>
 				<div class="form-row">
 					<input class="caption-content" type="text" onClick="this.select()" />
-					<div><input class="rate-content" type="text" onInput="calculateSum()" onclick="this.select();calculateSum()" />&nbsp;€</div>
-					<input class="factor-content" type="text" onInput="calculateSum()" onclick="this.select();calculateSum()" />
+					<div><input class="rate-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />&nbsp;€</div>
+					<input class="factor-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />
 					<span class="sum-content">0 €</span>
 					<a class="delete-content" onclick="removeRow(this);calculateSum()">&times;</a>
 				</div>
@@ -89,8 +89,8 @@
 				</div>
 				<div class="form-row">
 					<input class="caption-content" type="text" onClick="this.select()" />
-					<div><input class="rate-content" type="text" onInput="calculateSum()" onclick="this.select();calculateSum()" />&nbsp;€</div>
-					<input class="factor-content" type="text" onInput="calculateSum()" onclick="this.select();calculateSum()" />
+					<div><input class="rate-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />&nbsp;€</div>
+					<input class="factor-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />
 					<span class="sum-content">0 €</span>
 					<a class="delete-content" onclick="removeRow(this);calculateSum()">&times;</a>
 				</div>
@@ -110,8 +110,8 @@
 				</div>
 				<div class="form-row">
 					<input class="caption-content" type="text" onClick="this.select()" />
-					<div><input class="rate-content" type="text" onInput="calculateSum()" onclick="this.select();calculateSum()" />&nbsp;€</div>
-					<input class="factor-content" type="text" onInput="calculateSum()" onclick="this.select();calculateSum()" />
+					<div><input class="rate-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />&nbsp;€</div>
+					<input class="factor-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />
 					<span class="sum-content">0 €</span>
 					<a class="delete-content" onclick="removeRow(this);calculateSum()">&times;</a>
 				</div>
@@ -130,11 +130,11 @@
 						</div>
 						<div class="modifiers-item">
 							<span class="modifiers-heading">Rabatt:</span>
-							<div><input id="discount-input" class="modifiers-input" type="text" onInput="calculateSum()" onclick="this.select();calculateSum()">&nbsp;%</div>
+							<div><input id="discount-input" class="modifiers-input" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()">&nbsp;%</div>
 						</div>
 						<div class="modifiers-item">
 							<span class="modifiers-heading">Gewinnaufschlag:</span>
-							<div><input id="profit-input" class="modifiers-input" type="text" onInput="calculateSum()" onclick="this.select();calculateSum()">&nbsp;%</div>
+							<div><input id="profit-input" class="modifiers-input" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()">&nbsp;%</div>
 						</div>
 						<div class="modifiers-item">
 							<span class="modifiers-heading">Umsatzsteuer:</span>
@@ -146,11 +146,11 @@
 						</div>
 					</div>
 					<div class="total-row">
-						<span id="net-label" class="total-item">123,45 €</span>
-						<span id="discount-label" class="total-item">123,45 €</span>
-						<span id="profit-label" class="total-item">123,45 €</span>
-						<span id="tax-label" class="total-item">123,45 €</span>
-						<span class="total-sum">123,45 €</span>
+						<span id="net-label" class="total-item">0 €</span>
+						<span id="discount-label" class="total-item">0 €</span>
+						<span id="profit-label" class="total-item">0 €</span>
+						<span id="tax-label" class="total-item">0 €</span>
+						<span class="total-sum">0 €</span>
 					</div>
 				</div>
 			</div>
