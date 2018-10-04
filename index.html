@@ -68,14 +68,14 @@
 				</div>
 				<div class="form-row">
 					<input class="caption-content" type="text" onClick="this.select()" />
-					<div><input class="rate-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />&nbsp;€</div>
-					<input class="factor-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />
-					<span class="sum-content">0 €</span>
+					<div><input class="rate-content" type="text" value="0" onInput="calculateSum()" onclick="calculateSum()" />&nbsp;€</div>
+					<input class="factor-content" type="text" value="0" onInput="calculateSum()" onclick="calculateSum()" />
+					<span class="sum-content">0,00 €</span>
 					<a class="delete-content" onclick="removeRow(this);calculateSum()">&times;</a>
 				</div>
 				<div class="form-footer">
 					<button class="form-action" type="button" onclick="appendRow(this);calculateSum()">Arbeitseinheit hinzufügen</button>
-					<span class="section-sum">0 €</span>
+					<span class="section-sum">0,00 €</span>
 				</div>
 			</div>
 			<div class="material-section">
@@ -89,14 +89,14 @@
 				</div>
 				<div class="form-row">
 					<input class="caption-content" type="text" onClick="this.select()" />
-					<div><input class="rate-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />&nbsp;€</div>
-					<input class="factor-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />
-					<span class="sum-content">0 €</span>
+					<div><input class="rate-content" type="text" value="0" onInput="calculateSum()" onclick="calculateSum()" />&nbsp;€</div>
+					<input class="factor-content" type="text" value="0" onInput="calculateSum()" onclick="calculateSum()" />
+					<span class="sum-content">0,00 €</span>
 					<a class="delete-content" onclick="removeRow(this);calculateSum()">&times;</a>
 				</div>
 				<div class="form-footer">
 					<button class="form-action" type="button" onclick="appendRow(this);calculateSum()">Materialeinsatz hinzufügen</button>
-					<span class="section-sum">0 €</span>
+					<span class="section-sum">0,00 €</span>
 				</div>
 			</div>
 			<div class="machine-section">
@@ -110,14 +110,14 @@
 				</div>
 				<div class="form-row">
 					<input class="caption-content" type="text" onClick="this.select()" />
-					<div><input class="rate-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />&nbsp;€</div>
-					<input class="factor-content" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()" />
-					<span class="sum-content">0 €</span>
+					<div><input class="rate-content" type="text" value="0" onInput="calculateSum()" onclick="calculateSum()" />&nbsp;€</div>
+					<input class="factor-content" type="text" value="0" onInput="calculateSum()" onclick="calculateSum()" />
+					<span class="sum-content">0,00 €</span>
 					<a class="delete-content" onclick="removeRow(this);calculateSum()">&times;</a>
 				</div>
 				<div class="form-footer">
 					<button class="form-action" type="button" onclick="appendRow(this);calculateSum()">Maschineneinsatz hinzufügen</button>
-					<span class="section-sum">0 €</span>
+					<span class="section-sum">0,00 €</span>
 				</div>
 			</div>
 			<div class="modifiers-section">
@@ -130,15 +130,15 @@
 						</div>
 						<div class="modifiers-item">
 							<span class="modifiers-heading">Rabatt:</span>
-							<div><input id="discount-input" class="modifiers-input" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()">&nbsp;%</div>
+							<div><input id="discount-input" class="modifiers-input" type="text" value="0" onInput="calculateSum()" onclick="calculateSum()">&nbsp;%</div>
 						</div>
 						<div class="modifiers-item">
 							<span class="modifiers-heading">Gewinnaufschlag:</span>
-							<div><input id="profit-input" class="modifiers-input" type="text" value="0" onInput="calculateSum()" onclick="this.select();calculateSum()">&nbsp;%</div>
+							<div><input id="profit-input" class="modifiers-input" type="text" value="0" onInput="calculateSum()" onclick="calculateSum()">&nbsp;%</div>
 						</div>
 						<div class="modifiers-item">
 							<span class="modifiers-heading">Umsatzsteuer:</span>
-							<div><input id="tax-input" class="modifiers-input" type="text" value="19" onInput="calculateSum()" onclick="this.select();calculateSum()">&nbsp;%</div>
+							<div><input id="tax-input" class="modifiers-input" type="text" value="19" onInput="calculateSum()" onclick="calculateSum()">&nbsp;%</div>
 						</div>
 						<div class="modifiers-item">
 							<span class="modifiers-heading">Brutto:</span>
@@ -146,17 +146,17 @@
 						</div>
 					</div>
 					<div class="total-row">
-						<span id="net-label" class="total-item">0 €</span>
-						<span id="discount-label" class="total-item">0 €</span>
-						<span id="profit-label" class="total-item">0 €</span>
-						<span id="tax-label" class="total-item">0 €</span>
-						<span class="total-sum">0 €</span>
+						<span id="net-label" class="total-item">0,00 €</span>
+						<span id="discount-label" class="total-item">0,00 €</span>
+						<span id="profit-label" class="total-item">0,00 €</span>
+						<span id="tax-label" class="total-item">0,00 €</span>
+						<span class="total-sum">0,00 €</span>
 					</div>
 				</div>
 			</div>
 		</main>
 		<footer>
-			<h5>by digi-craft 2018</h5>
+			<!--by digi-craft 2018-->
 		</footer>
 	</section>
 	<div class="main-border"></div>

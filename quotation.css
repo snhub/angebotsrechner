@@ -5,12 +5,12 @@
 	--border-right:25mm;
 	--border-top:27mm;
 	--border-bottom:25mm;
-	/*--content-width:calc(var(--page-width) - var(--border-left) - var(--border-right));
-	--content-height:calc(var(--page-height) - var(--border-top) - var(--border-bottom));*/
+	--content-width:calc(var(--page-width) - var(--border-left) - var(--border-right));
+	--content-height:calc(var(--page-height) - var(--border-top) - var(--border-bottom));
 }
 
 body {
-	/*height:var(--content-height);*/
+	height:var(--page-height);
 	width:var(--page-width);
 	margin-left:auto;
 	margin-right:auto;
@@ -22,13 +22,24 @@ body {
 .a4 {
 	position: relative;
 	border:1px solid gainsboro;
+	height:100%;
+	font-size: 11pt;
+}
+
+.content {
+	position: absolute;
+	border:1px solid gainsboro;
+	top:105mm;
+	left:25mm;
+	width:calc(var(--page-width) - var(--border-left) - var(--border-right));
 }
 
 p {
 	margin:0;
+	margin-top:10px;
 }
 
-.address-frame {
+.customer-frame {
 	border:1px solid gainsboro;
 	position:absolute;
 	top:45mm;
@@ -38,30 +49,41 @@ p {
 	padding-left:5mm;
 }
 
-.address-frame .sender {
-	font-size: 7pt;
+.customer-frame .sender {
+	font-size: 8pt;
+	padding-top:10px;
 }
 
-.address-frame .customer-name {
+.customer-frame .customer-name {
 	font-size: 10pt;
 	font-weight: bold;
+	margin-top:15px;
 }
 
-.address-frame .customer-address {
+.customer-frame .customer-address {
 	font-size: 10pt;
 }
 
-.address-frame .customer-city {
+.customer-frame .customer-city {
 	font-size: 11pt;
 }
 
 .sender-frame {
 	border:1px solid gainsboro;
 	position:absolute;
-	top:50mm;
+	top:30mm;
 	left:125mm;
 	width:75mm;
-	height:40mm;
+	height:60mm;
 	padding-left:5mm;
+	font-size: 10pt;
+}
+
+.anrede {
+	margin-top:10mm;
+}
+
+.quotation-text {
+	margin-top:10mm;
 }
 

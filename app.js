@@ -321,9 +321,9 @@ function appendRow(obj) {
 	let clone = cloned.clone();
 	clone.insertAfter(cloned);
 	clone.find(".caption-content").val("");
-	clone.find(".rate-content").val("");
-	clone.find(".factor-content").val("");
-	clone.find(".sum-content").text("");
+	clone.find(".rate-content").val("0");
+	clone.find(".factor-content").val("0");
+	clone.find(".sum-content").text("0");
 }
 
 function removeRow(obj) {
